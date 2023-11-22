@@ -23,8 +23,7 @@ jobs:
 
     - name: Lint
       run: |
-        selene ./Common/src
-        selene ./Hub/src
+        selene .
 
   style:
     name: Styling
@@ -34,5 +33,5 @@ jobs:
     - uses: JohnnyMorganz/stylua-action@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        version: 3.0.0
+        version: latest
         args: --check .
